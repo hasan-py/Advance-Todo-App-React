@@ -18,7 +18,7 @@ const RowItem = ({todo,toggleComplete,toggleSelect}) => {
 			<td>{todo.text}</td>
 			<td>
 				<Button
-					color={todo.isComplete ? 'danger' : 'sucess'}
+					color={todo.isComplete ? 'danger' : 'success'}
 					onClick={()=> toggleComplete(todo.id)}
 				>
 					{todo.isComplete ? 'Completed' : 'Running'}	
@@ -41,7 +41,7 @@ const TableView = ({todos,toggleComplete,toggleSelect}) => {
     <Table>
     	<thead>
     		<tr>
-    			<th>#</th>
+    			<th>Select</th>
     			<th>Time</th>
     			<th>Todo</th>
     			<th>Action</th>

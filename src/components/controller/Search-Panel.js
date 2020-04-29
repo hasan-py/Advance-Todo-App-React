@@ -1,5 +1,5 @@
 import React from 'react';
-import {input,Button} from 'reactstrap'
+import {Input,Button} from 'reactstrap'
 import PropTypes from 'prop-types'
 
 
@@ -7,14 +7,14 @@ const SearchPanel = ({term,handleSearch,toggleForm}) => {
   return (
     <div  className='d-flex'>
     	<Input
-			placeholder='Enter Search Term'
-			className='mr-3'
+			placeholder='Search Todo'
+			className='col-sm-10'
 			value={term}
 			onChange={e=> handleSearch(e.target.value)}
     	/>
 
-    	<Button color="success" onClick={toggleForm} >
-    		New
+    	<Button className='col-sm-1 mx-5' color="success" onClick={toggleForm} >
+    		Add +
     	</Button>
     	
     </div>

@@ -19,7 +19,7 @@ const ListItem = ({todo,toggleSelect,toggleComplete}) => {
 			</div>
 			<Button 
 				className="ml-auto"
-				color={todo.isComplete ? "danger" : "sucess" }
+				color={todo.isComplete ? "danger" : "success" }
 				onClick={()=> toggleComplete(todo.id)} 
 			>
 					{todo.isComplete ? "Completed" : "Running" }			
@@ -44,8 +44,8 @@ const ListView = ({todos,toggleSelect,toggleComplete}) => {
 	    	{ todos.map(todo=>{
 					return(
 					<ListItem key={todo.id} todo={todo} toggleSelect={toggleSelect} toggleComplete={toggleComplete} />
-					);
-				}) };
+					)
+				}) }
 	    </ListGroup>
   );
 };

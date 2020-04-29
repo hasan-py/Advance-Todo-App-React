@@ -17,7 +17,7 @@ class CreateTodoForm extends Component {
 	}
 	
 	handleSubmit = (e)=> {
-		e.preventDefauld()
+		e.preventDefault()
 		this.props.createTodo(this.state) // This function will pass this all form value to parent component
 		e.target.reset()
 		this.setState({text:'',description:''})
@@ -45,6 +45,7 @@ class CreateTodoForm extends Component {
 						onChange={this.handleChange}
 					/>
 				</FormGroup>
+				<Button color="success">Add New</Button>
 			</Form>
 		);
 	}
